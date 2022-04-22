@@ -2,8 +2,10 @@
     <div class="col">
         <h5>Proposta empresarial</h5>
         <button class="btn btn-light float-end" (click)="randomize()">
-            <div *ngIf="!activePrevision">Mostrar previsió de proposta</div>
-            <div *ngIf="activePrevision">Ocultar previsió de proposta</div>
+            <div *ngIf="!activePrevision;else divOcultar">Mostrar previsió de proposta</div>
+            <ng-template #divOcultar>
+                <div>Ocultar previsió de proposta</div>
+            </ng-template>
         </button>
 
         <div style="display: block">
