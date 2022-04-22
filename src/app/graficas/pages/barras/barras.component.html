@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col">
+        <h5>Proposta empresarial</h5>
+        <button class="btn btn-light float-end" (click)="randomize()">
+            <div *ngIf="!activePrevision">Mostrar previsió de proposta</div>
+            <div *ngIf="activePrevision">Ocultar previsió de proposta</div>
+        </button>
+
+        <div style="display: block">
+            <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="barChartType"
+                (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+    </div>
+</div>

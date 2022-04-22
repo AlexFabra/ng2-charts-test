@@ -1,0 +1,11 @@
+
+<div class="row">
+    <h5>venda mensual de productes</h5>
+    <app-grafica-barra [horizontal]="true" [labelName]="labelProducts" [labels]="dayLabels" [chartData]="productSales">
+    </app-grafica-barra>
+</div>
+<div class="row">
+    <h5>venda anual de serveis</h5>
+    <app-grafica-barra [horizontal]="false" [labelName]="labelServices" [labels]="monthLabels"
+        [chartData]="serviceSales"></app-grafica-barra>
+</div>
